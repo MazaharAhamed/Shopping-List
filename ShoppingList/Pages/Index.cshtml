@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label class="control-label" asp-for="Listt.Category"></label>
+                <input class="form-control" asp-for="Listt.Category" required type="text" />
+            </div>
+            <div class="form-group">
+                <label class="control-label" asp-for="Listt.Quantity"></label>
+                <input class="form-control" asp-for="Listt.Quantity" required type="text" />
+            </div>
+            <div class="form-group">
+                <div class="col-2 offset-4">
+                    <button type="submit" asp-page="Confirmation" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

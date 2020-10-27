@@ -1,0 +1,45 @@
+﻿@page
+@model ShoppingList.Pages.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+        <table class="table table-striped border">
+            <thead>
+                <tr>
+                    <th>
+                        <label asp-for="Listt.FirstOrDefault().Id"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Listt.FirstOrDefault().Category"></label>
+                    </th>
+                    <th>
+                        <label asp-for="Listt.FirstOrDefault().Quantity"></label>
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Listt)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(m => item.Quantity)
+                        </td>
+                        <td>
+                            <a asp-route-id="@item.Id" asp-page="Edit" class="btn btn-success">Edit</a>
+                            <a asp-route-id="@item.Id" asp-page="Delete" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
