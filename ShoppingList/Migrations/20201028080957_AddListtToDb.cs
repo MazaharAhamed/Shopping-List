@@ -2,7 +2,7 @@
 
 namespace ShoppingList.Migrations
 {
-    public partial class AddListToDB : Migration
+    public partial class AddListtToDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,7 @@ namespace ShoppingList.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Category = table.Column<string>(nullable: true),
+                    Item = table.Column<string>(nullable: true),
                     Quantity = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

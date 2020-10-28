@@ -9,8 +9,8 @@ using ShoppingList.Model;
 namespace ShoppingList.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201026084848_AddListToDB")]
-    partial class AddListToDB
+    [Migration("20201028080957_AddListtToDb")]
+    partial class AddListtToDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,7 +27,7 @@ namespace ShoppingList.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category")
+                    b.Property<string>("Item")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Quantity")

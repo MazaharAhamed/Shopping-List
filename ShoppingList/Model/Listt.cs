@@ -11,7 +11,7 @@ namespace ShoppingList.Model
         [Key]
         public int Id { get; set; }
 
-        public string Category { get; set; }
+        public string Item { get; set; }
 
         public string Quantity { get; set; }
 

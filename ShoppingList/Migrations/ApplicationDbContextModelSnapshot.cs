@@ -25,7 +25,7 @@ namespace ShoppingList.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Category")
+                    b.Property<string>("Item")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Quantity")

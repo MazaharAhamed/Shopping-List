@@ -11,7 +11,7 @@
                         <label asp-for="Listt.FirstOrDefault().Id"></label>
                     </th>
                     <th>
-                        <label asp-for="Listt.FirstOrDefault().Category"></label>
+                        <label asp-for="Listt.FirstOrDefault().Item"></label>
                     </th>
                     <th>
                         <label asp-for="Listt.FirstOrDefault().Quantity"></label>
@@ -29,7 +29,7 @@
                             @Html.DisplayFor(m => item.Id)
                         </td>
                         <td>
-                            @Html.DisplayFor(m => item.Category)
+                            @Html.DisplayFor(m => item.Item)
                         </td>
                         <td>
                             @Html.DisplayFor(m => item.Quantity)

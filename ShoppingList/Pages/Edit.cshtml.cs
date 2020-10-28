@@ -29,7 +29,7 @@ namespace ShoppingList.Pages
             if (ModelState.IsValid)
             {
                 var ListtFromDb = await _db.Listt.FindAsync(Listt.Id);
-                ListtFromDb.Category = Listt.Category;
+                ListtFromDb.Item = Listt.Item;
                 ListtFromDb.Quantity = Listt.Quantity;
                 await _db.SaveChangesAsync();
                 return RedirectToPage("List");
